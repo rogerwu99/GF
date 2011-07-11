@@ -318,11 +318,17 @@ class AuthComponent extends Object {
      };
      //$check = $this->controller->{$this->user_model_name}->find($conditions);
 	// echo 'pre';
-	if ($this->user_model_name == 'User'):
-		$check = $this->controller->{$this->user_model_name}->find('first', array('conditions' => (array('User.email'=>$data['username'], 'User.password'=>$hashed_password))));
+	//if ($this->user_model_name == 'User'):
+		$check = $this->controller->{$this->user_model_name}->find('first', array('conditions' => (array('User.username'=>$data['username'], 'User.password'=>$hashed_password))));
+	//echo 'hi';
+	//$db_results=$this->User->findByEmail($data['username']);
+	//	$db_results = $this->controller->User->find('first',array('conditions'=>array('User.username'=>'roger@alumni.upenn.edu','User.password'=>'83c84644891d0fb9d74ea2f8f3c2125370b3ae59')));
+	//echo 'pre';
+		//var_dump($db_results);
+		//var_dump($data);
 		//elseif ($this->user_model_name == 'Merchant'):
 		//$check = $this->controller->{$this->user_model_name}->find('first', array('conditions' => (array('Merchant.email'=>$data['username'], 'Merchant.password'=>$hashed_password))));
-		endif;
+		//endif;
 		//echo $this->user_model_name;
 		//endif;
 	//$db_results=$this->User->findByEmail($data['username']);
@@ -330,7 +336,7 @@ class AuthComponent extends Object {
 	//$db_results = $this->controller->{$this->user_model_name}->find(array('conditions' => (array('User.email'=>'info@klickable.tv', 'User.password'=>'ll1WmmFM8JkJ2uYPtQ7S'))));
 	//var_dump($check);				 
 	if($check){ 
-	// echo 'in here';
+	 //echo 'in here';
         $this->Session->write($this->secure_key(),$check);
         if(
                    $this->allow_cookie && //check we're allowing cookies

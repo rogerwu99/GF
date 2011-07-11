@@ -738,11 +738,14 @@ padding-bottom:10px;
 	height:614px;
 }
 .consumer-background{
-	background-image: url("../img/dna.gif");
+	background-image: url("../img/cool-gifts.jpg");
 	margin-left:60px;
-	margin-top:-415px;
+	//margin-top:-415px;
 	width:667px;
 	height:512px;
+	top:3px;
+	display:block;
+	position:relative;
 	
 }
 
@@ -794,9 +797,57 @@ padding-bottom:10px;
 	*/
 	position: relative;
 	top: -100px;
-	left: 150px;
-	width: 550px;
-	height: 650px;
+	left: 10px;
+	width: 90%;
+	height: 1050px;
+	align: right;
+	padding: 5px;
+	border: 6px solid orange;
+	
+	background-color: white;
+	z-index:1002;
+	overflow: none;
+	text-align:center;
+	opacity:1;filter:alpha(opacity=75);
+	-moz-border-radius:20px;
+	-khtml-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:20px;
+}
+.lightbox_content_results {
+	display: block;
+	/*position: absolute;
+	top: 555px;
+	left: 270px;
+	width: 210px;
+	height: 135px;
+	*/
+	position: relative;
+	top: -100px;
+	left: 10px;
+	width: 90%;
+	height: 500px;
+	align: right;
+	padding: 5px;
+	border: 6px solid orange;
+	
+	background-color: white;
+	z-index:1002;
+	overflow:scroll;
+	text-align:center;
+	opacity:1;filter:alpha(opacity=75);
+	-moz-border-radius:20px;
+	-khtml-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:20px;
+}
+.lightbox_content_header {
+	display: block;
+	position: relative;
+	top: 10px;
+	left: 10px;
+	width: 90%;
+	height: 100px;
 	align: right;
 	padding: 5px;
 	border: 6px solid orange;

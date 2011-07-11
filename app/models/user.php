@@ -3,62 +3,7 @@ class User extends AppModel {
 
 	var $name = 'User';
     var $actsAs = array('Containable');
-	var $hasOne = array(
-        'Movie' => array(
-	        'className'             => 'Movie',
-    		'unique'				=> false
-    					),
-		'Interest' => array(
-	    	'className'             => 'Interest',
-    		'unique'				=> false
-    					),
-		'Place' => array(
-	    	'className'             => 'Place',
-    		'unique'				=> false
-    					),
-		'Userprofile' => array(
-	        'className'             => 'Userprofile',
-    		'unique'				=> false
-    					),
-		'Work' => array(
-	    	'className'             => 'Work',
-    		'unique'				=> false
-    					),
-		'School' => array(
-	    	'className'             => 'School',
-    		'unique'				=> false
-    					),
-	
-	/*	'Book' => array(
-	    	'className'             => 'Book',
-    		'unique'				=> false
-    					),
-		
-		'Work' => array(
-	    	'className'             => 'Work',
-    		'unique'				=> false
-    					),
-		'School' => array(
-	    	'className'             => 'School',
-    		'unique'				=> false
-    					),
-		'Purchase' => array(
-	    	'className'             => 'Purchase',
-    		'unique'				=> false
-    					),
-		'Aspiration' => array(
-	    	'className'             => 'Aspiration',
-    		'unique'				=> false
-    					),
-		'Charity' => array(
-	    	'className'             => 'Charity',
-    		'unique'				=> false
-    					),
-		'Travel' => array(
-	    	'className'             => 'Travel',
-    		'unique'				=> false
-    					)
-		*/);
+
 	  				
     
 	function identicalFieldValues($field=array(), $compare_field=null ) 

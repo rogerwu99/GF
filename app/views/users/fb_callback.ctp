@@ -1,7 +1,8 @@
+<div class="clear"></div>
 <div style="margin-left:60px;">
-	<h4>Smart Rewards for the Smart Customer</h4>
+	<h4>No more BS Gifts</h4>
 	<div class="smallercopy" style="float:right;margin-top:-35px;margin-right:-25px;">
-	<? echo $html->link('Merchant Login',array('controller'=>'pages','action'=>'business')); ?>
+	<? //echo $html->link('Merchant Login',array('controller'=>'pages','action'=>'business')); ?>
 	</div>
 </div>
 <div class="consumer-background" id="consumer" style="display:block;">
@@ -26,8 +27,8 @@
 				$years=range((int)date('Y')-13,1900);	
 				?> 
 				<? $session->flash(); ?>
-            	<div class="bodycopy_reg">Sign up</div>
-				<?php echo $form->create('User', array('action' => 'register')); ?>
+            	<div class="bodycopy_reg">Finish Signing up</div>
+				<?php echo $form->create('User', array('action' => 'fb_callback')); ?>
                   <div class="smallercopy_reg">Name</div>
                   <div class='smallercopy_err' style='color:red'><?php echo $form->input('name', array('label'=>false, 'class'=>'required', 'style'=>'width:217px', 'value'=>$fb_user->name)); ?></div>
                   <div class="smallercopy_reg">Email Address</div>
@@ -61,7 +62,7 @@
                       </div>
                   <div class="smallercopy_reg" style="text-align:center;"><br />
                   	<input type="hidden" name="data[User][fb_uid]" value="<? echo $fb_user->id; ?>">		
-    				<?php echo $ajax->submit('Create my Account!', array('url'=>array('controller'=>'users','action'=>'register'),'update'=>'reg_content_user'));?>
+    				<?php echo $form->submit('Create my Account!', array('url'=>array('controller'=>'users','action'=>'fb_callback')));//,'update'=>'reg_content_user'));?>
  	   				<?php echo $form->end(); ?>        
 				  </div>
              </div>  
